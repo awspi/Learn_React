@@ -1,13 +1,19 @@
 import React from "react";
-
+import PropTypes from 'prop-types'
+import Add from './add';
 class HelloWorld extends React.Component {
+
+  static defaultProps={
+    name:'default'
+  }
 
   constructor(props) {
     super(props)
 
     
     this.state = {
-      message: 'hello world'
+      message: 'hello world',
+      age:this.props.age
     }
   }
 componentDidMount(){
@@ -39,18 +45,38 @@ changeMsg(){
     message:this.state.message+'~'
   })
 }
+changeCounter(count){
+   this.setState({
+    age:this.state.age+count
+   })
+}
 
   render() {
-    const {name,age}=this.props
-    const { message } = this.state
+    const {name}=this.props
+    const { message,age } = this.state
     return (
       <div>
         <h2>{name}</h2>
         <h2>{age}</h2>
+        
+        
+        <Add addClick={(count)=>this.changeCounter(count)}/>
+
+        
         <button onClick={()=>this.changeMsg()}>update</button>
         <h2>{message}</h2>
       </div>
     )
   }
 }
+
+HelloWorld.propTypes={
+  name:PropTypes.string,
+  age:PropTypes.number.isRequired
+}
+
+// HelloWorld.defaultProps={
+//   name:'defaultName'
+// }
+
 export default HelloWorld

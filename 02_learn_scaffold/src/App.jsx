@@ -27,7 +27,7 @@ HelloWorld
         <h2>{message}</h2>
         <h2>{isShow?'show':'not'}</h2>
         <button onClick={()=>this.switchDisplay()}>toggle</button>
-        {isShow&&  <HelloWorld name={'pithy'} age={22}/>}
+        {isShow&&  <HelloWorld age={22}/>}
       </div>
     )
   }
