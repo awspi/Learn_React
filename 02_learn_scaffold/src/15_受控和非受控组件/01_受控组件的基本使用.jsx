@@ -5,7 +5,7 @@ export class App extends PureComponent {
     super()
 
     this.state = {
-      username: "pithy"
+      username: "coderwhy"
     }
   }
 
@@ -21,7 +21,6 @@ export class App extends PureComponent {
       <div>
         {/* 受控组件 */}
         <input type="checkbox" value={username} onChange={e => this.inputChange(e)}/>
-        <input type="text" value={username} onChange={e => this.inputChange(e)}/>
 
         {/* 非受控组件 */}
         <input type="text" />
