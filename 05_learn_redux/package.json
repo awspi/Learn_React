@@ -1,0 +1,12 @@
+{
+  "name": "05_learn_redux",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start":"nodemon src/index.js"
+  },
+  "dependencies": {
+    "redux": "^4.2.0"
+  }
+}

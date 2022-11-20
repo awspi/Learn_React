@@ -8,11 +8,9 @@ export class App extends PureComponent {
       titleSize: 30
     }
   }
-
   addTitleSize() {
     this.setState({ titleSize: this.state.titleSize + 2 })
   }
-
   render() {
     const { titleSize } = this.state
 

@@ -21,7 +21,7 @@ export const AppWrapper = styled.div`
 // 4.可以通过attrs给标签模板字符串中提供的属性
 // 5.从一个单独的文件中引入变量
 export const SectionWrapper = styled.div.attrs(props => ({
-  tColor: props.color || "blue"
+  tColor: props.color || "green"
 }))`
   border: 1px solid red;
 
